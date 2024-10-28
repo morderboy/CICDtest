@@ -13,15 +13,15 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - uses: actions/setup-python@v1
-          with:
-            python-version: '3.11'
-            architecture: 'x64'
+        with:
+          python-version: '3.11'
+          architecture: 'x64'
       - name: Install requirements
         run: pip install -r requirements.txt
       - name: Run Tests
         run: coverage run -m unittest tests.py
       - name: Tests report
-          run: coverage report
+        run: coverage report
   build:
     needs: [run_tests]
     runs-on: [ubuntu-latest]
