@@ -20,4 +20,5 @@ class FastApiTests(unittest.TestCase):
 
 
 if __name__ == '__main__':
+    #Run Tests
     unittest.main()
